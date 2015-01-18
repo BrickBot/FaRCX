@@ -1,16 +1,17 @@
 body {
-	background-color: gray;
+	background-color: #DCDCDC;
 	margin: 0; padding: 0;
-	background-image: url(http://blog.spoongraphics.co.uk/wp-content/uploads/2012/textures/18.jpg);
+	background-image: url("images/white.jpg");
 }
 
 .wrapper {
-	background-image: url(http://freeseamlesstextures.com/images/3-green-paper-background-lrg.jpg);
+	background-color: #6A802D;
+	background-image: url("images/green.jpg");
 	width: 80%; margin: 0 auto;
 	min-width: 500px;
-	background-color: #040;
 	padding: 1em;
-	border-bottom-left-radius: 2% 2%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 .videos {
@@ -27,12 +28,16 @@ body {
 	width: 47.5%; height: auto;
 	padding: 1%;
 	background-color: silver;
-	background-image: url(images/steel.png);
-	border-radius: 2%;
+	background-image: url("images/steel.png");
+	border-radius: 10px;
 }
 
-#rover { margin-right: 0.5%; }
-#ipcam { margin-left: 0.5%; }
+#rover { 
+	margin-right: 0.5%;
+ }
+#ipcam { 
+	margin-left: 0.5%;
+	 }
 
 .controls {
 	/* display: inline-block; */
@@ -51,7 +56,7 @@ body {
 	border-radius: 10px;
 	
 	background-color: silver;
-	background-image: url(images/steel.png);
+	background-image: url("images/steel.png");
 	
 	position: relative;
 	top: 50%;
@@ -76,7 +81,7 @@ body {
 	margin: auto;
 	width: 180px;
 	float: right;
-	background-image: url(images/steel.png);
+	background-image: url("images/steel.png");
 	border-radius: 10px;
 	
 	font-size: 0; /* Used to fix space between arrows */
@@ -91,23 +96,23 @@ body {
 }
 
 #up {
-	background-image: url(images/arrow.png);
+	background-image: url("images/arrow.png");
 	margin: 5px 65px;
 	transform: rotate(90deg);
 }
 #left {
-	background-image: url(images/arrow.png);
+	background-image: url("images/arrow.png");
 	/* transform: rotate(120deg); */
 }
 #stop {
-	background-image: url(images/middle.png);
+	background-image: url("images/middle.png");
 }
 #right {
-	background-image: url(images/arrow.png);
+	background-image: url("images/arrow.png");
 	transform: rotate(180deg);
 }
 #down {
 	margin: 5px 65px;
-	background-image: url(images/arrow.png);
+	background-image: url("images/arrow.png");
 	transform: rotate(-90deg);
 }
