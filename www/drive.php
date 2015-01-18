@@ -30,7 +30,7 @@ if (isset($_REQUEST["direction"]))
 else
 	$dir = "forward";
 
-$tower = fopen('/dev/usb/legousbtower0', 'r+');
+$tower = fopen('/dev/ttyS0', 'r+');
 
 fwrite($tower, make_packet("e185")); // Set motors to forward
 if ($dir == "left")
