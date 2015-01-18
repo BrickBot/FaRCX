@@ -43,7 +43,7 @@ elseif ($dir == "backward")
 fwrite($tower, make_packet("1305020" . $power)); // Set power for both motors
 
 fwrite($tower, make_packet("2185")); // Turn on both motors
-usleep($time/3 * 1000000);
+usleep($time * 1000000);
 fwrite($tower, make_packet("2945")); // Turn off both motors
 fclose($tower);
 
