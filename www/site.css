@@ -15,18 +15,21 @@
     font-size:150%;
     text-shadow:2px 2px black;
 }
-}
-.navlinks a{
+.navlinks {
     color:white;
     text-decoration:none;
     text-align:center;
     width:100%;
-    margin:0 auto;
     text-shadow:2px 2px black;
     font-size:130%;
 }
+.navlinks a{
+    color:white;
+    text-decoration:none;
+}
 .section {
     width:auto;
+    padding:5px;
 }
 .content {
     text-indent:1cm;
