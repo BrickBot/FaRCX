@@ -15,21 +15,8 @@
     font-size:150%;
     text-shadow:2px 2px black;
 }
-.navwrapper {
-    height:auto;
-    width:auto;
-    float:left;
-    padding-right:5px;
 }
-.nav {
-    line-height:30px;
-    height:auto;
-    width:100%;
-    /*float:left;*/
-    padding:5px; 
-    background-image: url("images/green.jpg");
-}
-.navlink a{
+.navlinks a{
     color:white;
     text-decoration:none;
     text-align:center;
@@ -40,8 +27,9 @@
 }
 .section {
     width:auto;
-    /*float:right;
-    /*text-align:left;*/
+}
+.content {
+    text-indent:1cm;
 }
 .footer {
     background-image: url("images/green.jpg");
