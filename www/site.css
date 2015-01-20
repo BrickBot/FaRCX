@@ -1,7 +1,9 @@
 @import url("reset.css");
 
 body {
+	height: 100%;
 	background-image: url("images/white.jpg");
+	display: table;
 }
 
 header {
@@ -37,7 +39,13 @@ nav a {
 	text-decoration: none;
 }
 
+.content-wrapper {
+	height: 100%;
+	display: table-row;
+}
+
 .content {
+	display: table-cell;
 	padding: 1em;
 }
 
