@@ -1,53 +1,60 @@
 .header {
-    text-align:center;
-    padding:5px;
-    height:auto;
-    background-image: url("images/green.jpg");
+	text-align: center;
+	padding: 5px;
+	height: auto;
+	background-image: url("images/green.jpg");
 }
-.headline {
-    color:white;
-    font-size:200%;
-    text-shadow:2px 2px black;
 
+.headline {
+	color: white;
+	font-size: 200%;
+	text-shadow: 2px 2px black;
 }
+
 .subhead {
-    color:#FFCC99;
-    font-size:150%;
-    text-shadow:2px 2px black;
+	color: #FFCC99;
+	font-size: 150%;
+	text-shadow: 2px 2px black;
 }
+
 .navlinks {
-    color:white;
-    text-decoration:none;
-    text-align:center;
-    width:100%;
-    text-shadow:2px 2px black;
-    font-size:130%;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	width: 100%;
+	text-shadow: 2px 2px black;
+	font-size: 130%;
 }
-.navlinks a{
-    color:white;
-    text-decoration:none;
+
+.navlinks a {
+	color: white;
+	text-decoration: none;
 }
+
 .section {
-    width:auto;
-    padding:5px;
+	width: auto;
+	padding: 5px;
 }
+
 .content {
-    text-indent:1cm;
+	text-indent: 1cm;
 }
+
 .footer {
-    background-image: url("images/green.jpg");
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px;
-    text-shadow:2px 2px black;
- 
+	background-image: url("images/green.jpg");
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+	text-shadow: 2px 2px black;
 }
-.sectionsubhead{
-    font-size:125%;
-    text-align: center;
+
+.sectionsubhead {
+	font-size: 125%;
+	text-align: center;
 }
+
 .sectionhead {
-    font-size:150%;
-    text-align: center;
+	font-size: 150%;
+	text-align: center;
 }
