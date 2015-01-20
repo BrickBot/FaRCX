@@ -1,5 +1,9 @@
 @import url("reset.css");
 
+body {
+	background-image: url("images/white.jpg");
+}
+
 header {
 	text-align: center;
 	padding: 5px;
