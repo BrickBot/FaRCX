@@ -16,21 +16,21 @@ function make_packet($data)
 }
 
 // Require direction to be set so just browsing to the page won't do anything
-if (!$_REQUEST["direction"]) { die(); }
+if (!$_POST["direction"]) { die(); }
 
 // Validate time
-$time = (int) $_REQUEST["time"];
+$time = (int) $_POST["time"];
 if ($time < 1 || $time > 3) { $time = 2; }
 
 // Validate power
-$power = (int) $_REQUEST["power"];
+$power = (int) $_POST["power"];
 if ($power < 1 || $power > 7) { $power = 4; }
 
 $tower = fopen('/dev/ttyS0', 'r+');
 
 // Set motor directions
 fwrite($tower, make_packet("e185")); // Set motors to forward
-switch ($_REQUEST["direction"])
+switch ($_POST["direction"])
 {
 	case "left":
 		fwrite($tower, make_packet("e941")); // Invert left motor
