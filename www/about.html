@@ -50,18 +50,18 @@
 				</p>
 				<h2>Technical Overview</h2>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.
-					Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.
-					Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.
-					Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis.
-					Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan.
-					Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes,
-					nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
+					The rover is directly controlled through a <a href="https://en.wikipedia.org/wiki/Lego_Mindstorms#RCX">LEGO&reg Mindstorms RCX</a> "smart brick"
+					by a few cables running from it to the motors. When you press a button on the drive page, a bit of <a href="https://jquery.com/">jQuery</a>
+					code makes a request to a <a href="http://php.net/">PHP</a> script, telling it to move the rover. The PHP page translates this request into
+					<a href="http://www.mralligator.com/rcx/opcodes.html">RCX opcodes</a> which are sent over infrared (like a TV remote) as a series of packets, as per its
+					<a href="http://www.mralligator.com/rcx/protocol.html">protocol</a>. To talk with the rover, a standard LEGO USB or serial IR tower is used, the
+					<a href="http://legousb.sourceforge.net/legousbtower/index.shtml">drivers</a> for which are already built into Linux kernels newer than 2.6.1.
 				</p>
 				<h1>Contact</h1>
 				<p>
-					To stay up to date on important FaRCX-related developments and notices, <a href="https://twitter.com/DriveOurRover">follow FaRCX on Twitter</a>. For bug reports and similar, <a href="https://github.com/G33kDude/FaRCX/issues">open an issue on GitHub</a>. For other inquiries, <a href="mailto:lego@johnholbrook.us?subject=FaRCX">send us an email</a>.
+					To stay up to date on important FaRCX-related developments and notices, <a href="https://twitter.com/DriveOurRover">follow FaRCX on Twitter</a>.
+					For bug reports and similar, <a href="https://github.com/G33kDude/FaRCX/issues">open an issue on GitHub</a>. For other inquiries,
+					<a href="mailto:lego@johnholbrook.us?subject=FaRCX">send us an email</a>.
 				</p>
 			</div>
 		</div>
