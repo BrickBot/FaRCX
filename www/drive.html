@@ -3,57 +3,65 @@
 	<head>
 		<title>FaRCX - Control Page</title>
 		<link rel="icon" href="images/RCX.ico" />
-		<link rel="stylesheet" type="text/css" href="reset.css" />
+		<link rel="stylesheet" type="text/css" href="site.css" />
 		<link rel="stylesheet" type="text/css" href="drive.css" />
 		<script src="jquery-2.1.1.min.js"></script>
-		<script src="drive.js"></script>
-		<script src="hidden.js"></script>
 	</head>
 	<body>
-		<div class="wrapper">
-			<div class="navbar">
-				<a class="navlink" id="about" href="#">
-					About
-				</a>
-				<a class="navlink" href="https://github.com/G33kDude/FaRCX/issues" target="_blank">
-					Feedback
-				</a>
-			</div>
-			<div id="abouttext" class="navcontent" style="display:none">
-				<p>FaRCX is a LEGO&reg; Mindstorms RCX robot which you can remotely drive around a simulated Martian landscape!
-				For more information, see the <a href="about.html" target="_blank">About page</a>.</p>
-				<br/>
-				<p>Did you get redirected here from redrover.johnholbrook.us? FaRCX is the spiritual successor to the Red Rover, and the same RCX which was driven
-				via the Red Rover site is now controlled by FaRCX. As a result, it's no longer
-				possible to drive a robot using the Red Rover site. However, the site's pages remain up for posterity, and can
-				be found at <a href="http://oldredrover.johnholbrook.us/" target="_blank">oldredrover.johnholbrook.us</a>.
-				<br/><br/>
-				<p><a href="https://twitter.com/DriveOurRover" target="_blank">Twitter</a>
-				&bull; <a href="mailto:lego@johnholbrook.us?subject=FaRCX" target="_blank">Email</a>
-				&bull; <a href="https://github.com/G33kDude/FaRCX" target="_blank">GitHub</a></p>
-			</div>
+		<header>
+			<h1>FaRCX</h1>
+			<h2>Drive a LEGO&reg; Mindstorms RCX Robot Over the Internet!</h2>
+			<nav>
+				<a href="index.html">Home</a> &bull;
+				<a href="about.html">About</a> &bull;
+				<a href="login.html">Drive Our Rover!</a> &bull;
+				<a href="help.html">Help</a> &bull;
+				<a href="https://github.com/G33kDude/FaRCX">GitHub</a>
+			</nav>
+		</header>
+		<div class="content-wrapper">
 			<div class="content">
+				<!-- <div class="video-wrapper"> -->
 				<div class="videos">
-					<img class="video" id="rover" src="cam/pov.jpg" />
-					<img class="video" id="ipcam" src="cam/overhead.jpg" />
-				</div>
-				<div class="controls">
-					<div class="sliders">
-						<span class="label">Duration (seconds):</span>
-						<input id="time" type="range" min="1" max="3" value="3" />
-						<br /><br />
-						<span class="label">Power:</span>
-						<input id="power" type="range" min="1" max="7" value="4" />
+					<div class="floating video">
+						<img src="cam/pov.jpg" />
 					</div>
-					<div class="dpad">
-						<div class="arrow" id="up"></div>
-						<div class="arrow" id="left"></div>
-						<div class="arrow" id="stop"></div>
-						<div class="arrow" id="right"></div>
-						<div class="arrow" id="down"></div>
+					<div class="floating video">
+						<img src="cam/overhead.jpg" />
+					</div>
+				</div>
+				<!-- </div> -->
+				<div class="controls">
+					<div class="control">
+						<div class="log floating">
+							Log stuff<br />
+							Log stuff<br />
+							Log stuff
+						</div>
+					</div>
+					<div class="control">
+						<div class="dpad floating">
+							<div class="arrow" id="up"></div>
+							<div class="arrow" id="left"></div>
+							<div class="arrow" id="stop"></div>
+							<div class="arrow" id="right"></div>
+							<div class="arrow" id="down"></div>
+						</div>
+					</div>
+					<div class="control">
+						<div class="sliders floating">
+							<span class="label">Duration (seconds):</span>
+							<input id="time" type="range" min="1" max="3" value="3" />
+							<br /><br />
+							<span class="label">Power:</span>
+							<input id="power" type="range" min="1" max="7" value="4" />
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</body>
-</html>
+			</div>
+			<footer>
+				LEGO&reg; is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
+			</footer>
+		</body>
+	</html>		

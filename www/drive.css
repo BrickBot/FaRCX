@@ -1,137 +1,47 @@
-body {
-	background-color: #DCDCDC;
-	margin: 0; padding: 0;
-	background-image: url("images/white.jpg");
-}
-
-.wrapper {
-	background-color: #6A802D;
-	background-image: url("images/green.jpg");
-	width: 80%; margin: 0 auto;
-	min-width: 500px;
-	padding: 1em;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
-
-.navbar {
-	height:auto;
-	margin-bottom:10px;
-	text-align:center;
-	border-radius: 10px;
-	padding:5px;
-}
-
-.navlink {
-	font-weight:bold;
-	text-decoration:none;
-	color:#000000;
-	/*background-color:#DD782F;*/
-	border-radius: 10px;
-	padding-left:10px;
-	padding-right:10px;
-	margin:10px;
-	background-image: url("images/steel.png");
-}
-
-.navcontent {
-	height:auto;
-	margin-bottom:10px;
-	text-align:center;
-	border-radius: 10px;
-	background-image: url("images/steel.png");
-	padding:5px;
-}
-
 .videos {
-	display: block;
 	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 10px;
-	
-	font-size: 0;
+	/* overflow: hidden; */
 }
 
 .video {
-	display: inline;
-	width: 47.5%; height: auto;
-	padding: 1%;
-	background-color: silver;
-	background-image: url("images/steel.png");
-	border-radius: 10px;
+	display: inline-block;
+	width: 25%;
+	margin: 0 50px;
 }
 
-.captions {
-	display: block;
+.video img {
 	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 10px;
-	
-	font-size: 0;
 }
-
-.caption {
-	display: inline;
-	width: 47.5%; height: auto;
-	padding: 1%;
-	background-color: silver;
-	background-image: url("images/steel.png");
-	border-radius: 10px;
-	text-align: center;
-}
-
-#rover { 
-	margin-right: 0.5%;
- }
-#ipcam { 
-	margin-left: 0.5%;
-	 }
 
 .controls {
-	/* display: inline-block; */
-	margin: 0 auto;
-	width: 500px;
-	height: 175px;
+	margin: 50px;
+}
+
+.control {
+	width: 33%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.log {
+	margin: auto;
+	width: 200px;
 }
 
 .sliders {
+	margin: auto;
 	width: 160px;
-	/* margin-right: 50px; */
-	padding: 10px;
-	
-	float: left;
-	
-	border-radius: 10px;
-	
-	background-color: silver;
-	background-image: url("images/steel.png");
-	
-	position: relative;
-	top: 50%;
-	transform: translate(0, -50%);
-	
-	text-align: center;
-}
-
-.label {
-	display: inline-block;
-	/* width: 75px; */
-	margin: 0; padding: 0;
 }
 
 .sliders input {
-	margin: 0; padding: 0;
+	/* margin: 0; padding: 0; */
 	width: 100%;
-	font-size: 0;
 }
 
 .dpad {
 	margin: auto;
 	width: 180px;
-	float: right;
-	background-image: url("images/steel.png");
-	border-radius: 10px;
-	
+	height: 180px;
 	font-size: 0; /* Used to fix space between arrows */
 }
 
@@ -139,7 +49,6 @@ body {
 	display: inline-block;
 	width: 50px; height: 50px;
 	background-size: contain;
-	margin: 5px;
 	cursor: pointer;
 }
 
@@ -150,17 +59,20 @@ body {
 }
 #left {
 	background-image: url("images/arrow.png");
+	margin: 5px;
 	/* transform: rotate(120deg); */
 }
 #stop {
 	background-image: url("images/middle.png");
+	margin: 5px;
 }
 #right {
 	background-image: url("images/arrow.png");
+	margin: 5px;
 	transform: rotate(180deg);
 }
 #down {
-	margin: 5px 65px;
 	background-image: url("images/arrow.png");
+	margin: 5px 65px;
 	transform: rotate(-90deg);
 }
