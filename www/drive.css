@@ -55,6 +55,7 @@
 #up {
 	background-image: url("images/arrow.png");
 	margin: 5px 65px;
+	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
 #left {
@@ -69,10 +70,12 @@
 #right {
 	background-image: url("images/arrow.png");
 	margin: 5px;
+	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
 #down {
 	background-image: url("images/arrow.png");
 	margin: 5px 65px;
+	-webkit-transform: rotate(-90deg);
 	transform: rotate(-90deg);
 }
