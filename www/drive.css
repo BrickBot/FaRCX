@@ -1,45 +1,70 @@
+.content {
+	/* font-size: 0; */
+	height: 500px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
 .videos {
-	width: 100%;
-	/* overflow: hidden; */
+	/* flex: 1 0 main-size; */
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	font-size: 0;
+	/* flex-wrap: nowrap; */
+	/* justify-content: space-between; */
+	/* height: 100%; */
+	/* align-items: center; */
+	/* width: auto; */
 }
 
 .video {
-	display: inline-block;
-	width: 25%;
-	margin: 0 50px;
-}
-
-.video img {
-	width: 100%;
+	border-radius: 8px;
+	margin-right: 20px;
 }
 
 .controls {
-	margin: 50px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background-image: url("images/green.jpg");
+	border-radius: 0.5em;
+	padding: 1em;
 }
 
-.control {
-	width: 33%;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.log {
-	margin: auto;
-	width: 200px;
-}
-
-.sliders {
-	margin: auto;
-	width: 160px;
+.controls>div {
+	background-image: url("images/white.jpg");
+	border-radius: 8px;
+	padding: 8px;
+	width: 180px;
 }
 
 .sliders input {
-	/* margin: 0; padding: 0; */
+	display: block;
 	width: 100%;
+	margin: 0;
 }
 
 .dpad {
-	margin: auto;
 	width: 180px;
 	height: 180px;
 	font-size: 0; /* Used to fix space between arrows */
@@ -50,32 +75,24 @@
 	width: 50px; height: 50px;
 	background-size: contain;
 	cursor: pointer;
+	background-image: url("images/arrow.png");
+	margin: 5px;
 }
 
 #up {
-	background-image: url("images/arrow.png");
 	margin: 5px 65px;
 	-webkit-transform: rotate(90deg);
-	transform: rotate(90deg);
+	        transform: rotate(90deg);
 }
-#left {
-	background-image: url("images/arrow.png");
-	margin: 5px;
-	/* transform: rotate(120deg); */
+#right {
+	-webkit-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+#down {
+	margin: 5px 65px;
+	-webkit-transform: rotate(270deg);
+	        transform: rotate(270deg);
 }
 #stop {
 	background-image: url("images/middle.png");
-	margin: 5px;
-}
-#right {
-	background-image: url("images/arrow.png");
-	margin: 5px;
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
-}
-#down {
-	background-image: url("images/arrow.png");
-	margin: 5px 65px;
-	-webkit-transform: rotate(-90deg);
-	transform: rotate(-90deg);
 }
