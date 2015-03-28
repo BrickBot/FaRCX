@@ -7,6 +7,10 @@ html, body {
 	padding: 0;
 }
 
+em {
+	font-style: italic;
+}
+
 body {
 	background-image: url("images/white.jpg");
 	display: table;
