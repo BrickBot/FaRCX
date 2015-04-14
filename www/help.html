@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FaRCX - Help</title>
+		<link rel="icon" href="images/RCX.ico" />
+		<link rel="stylesheet" type="text/css" href="site.css" />
+		<script src="jquery-2.1.1.min.js"></script>
+		<script src="hidden.js"></script>
+		<!-- BEGIN Icon Gubbins -->
+		<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">	
+		<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/icons/favicon-194x194.png" sizes="194x194">
+		<link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/icons/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/icons/manifest.json">
+		<link rel="shortcut icon" href="/icons/favicon.ico">
+		<meta name="msapplication-TileColor" content="#5b6c73">
+		<meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+		<meta name="msapplication-config" content="/icons/browserconfig.xml">
+		<meta name="theme-color" content="#e7d433">
+		<!-- END Icon Gubbins -->
+	</head>
+	<body>
+		<header>
+			<h1>FaRCX</h1>
+			<h2>Drive a LEGO&reg; Mindstorms RCX Robot Over the Internet!</h2>
+			<nav>
+				<a href="index.html">Home</a> &bull;
+				<a href="about.html">About</a> &bull;
+				<a href="login.html">Drive Our Rover!</a> &bull;
+				<a href="help.html">Help</a> &bull;
+				<a href="https://twitter.com/DriveOurRover" target="_blank">Twitter</a> &bull;
+				<a href="https://github.com/G33kDude/FaRCX" target="_blank">GitHub</a>
+			</nav>
+		</header>
+		<div class="content-wrapper">
+			<div class="content">
+				<h1>Help!</h1>
+				<p>Have a question, concern, or other issue with using FaRCX? You're in the right place!</p>
+				<br/>
+				<div class="floating" id="tableofcontents">
+					<!-- TO DO: have show/hide button become either show or hide based on state of table of contents -->
+					Table of Contents <a id="showcontents" href="#">(Show/Hide)</a>:
+					<div id="contents" style="display:none">
+						<ul>
+							<li><a href="#otherdrivers">The Rover is moving without me doing anything!</a></li>
+							<li><a href="#notmoving">The Rover doesn't move when I press a button!</a></li>
+							<li><a href="#wontstop">The Rover won't stop!</a></li>
+							<li><a href="#stuck">I'm stuck on an object!</a></li>
+							<li><a href="#spaceman">The spaceman has stopped moving!</a></li>
+							<li><a href="#camerastopped">One or both of the camera feeds isn't working!</a></li>
+							<li><a href="#dark">It's dark!</a></li>
+							<li><a href="#bug">I found a bug!</a></li>
+							<li><a href="#contact">I need to contact you!</a></li>
+						</ul>
+					</div>
+				</div>
+				<h2 id="otherdrivers">The Rover is moving without me doing anything!</h2>
+				<p>Probably someone else is driving the rover at the same time as you. Check the Logs to confirm. You may want to try again later if several
+					others are driving.</p>
+				<h2 id="notmoving">The Rover doesn't move when I press a button!</h2>
+				<p>Probably this is a camera issue. Look for the rotating spaceman visible in the Earth-side (right-hand) camera feed. If the spaceman doesn't
+					appear to be rotating, it's possible the camera isn't working (<a href="#spaceman">or the spaceman is dead</a>). Try reloading the page.</p>
+				<p>If one or more camera feeds are working, or if reloading the page does not solve the camera issue, <a href="#contact">send us an email</a>
+					and we'll try to fix it as soon as possible.</p>
+				<h2 id="wontstop">The Rover won't stop!</h2>
+				<p>This is rare, but it happens sometimes; we don't really know why yet. <a href="#contact">Get in touch</a> and we'll do what we can.</p>
+				<h2 id="stuck">I'm stuck on an object!</h2>
+				<p>Try backing straight up; you're less likely to unstick yourself if you turn.</p>
+				<h2 id="spaceman">The Spaceman has stopped moving!</h2>
+				<p>The rotating spaceman runs on a single AA battery, which has to be replaced about once a month. If the spaceman has stopped rotating,
+					<a href="#contact">drop us a line</a> and we'll get on it.</p>
+				<h2 id="camerastopped">One or both of the camera feeds isn't working!</h2>
+				<p>The two camera feeds work on entirely different technologies, so if neither is working it's probably a something on your end.
+					Try reloading the page. If only one camera is down and reloading doesn't help, <a href="#contact">tell us</a> and we'll look into it.</p>
+				<h2 id="dark">It's dark!</h2>
+				<p>The Rover is physically located under a table in a spare bedroom. Usually, the room is uninhabited, so the Rover's dedicated
+					flourescent light can remain on 24/7. However, it's sometimes necessary to turn the light off so that people can sleep.
+					If it's nighttime in the eastern US, that's probably why. If the light remains off for several days at a time, John probably
+					forgot to turn it back on. <a href="#contact">Bring it to our attention</a> and it'll go back on soon.</p>
+				<h2 id="bug">I found a bug!</h2>
+				<a href="https://github.com/G33kDude/FaRCX/issues/new">Open an issue on GitHub</a>
+				<h2 id="contact">I need to contact you!</h2>
+				<p>For physical problems with the Rover or it's surroundings, problems with things malfunctioning (e.g., one of the camera feeds is down, or the 
+					robot isn't moving), or for other inquiries, <a href="mailto:lego@johnholbrook.us?subject=FaRCX">send us an email</a>. If you've found a bug in FaRCX,
+					<a href="https://github.com/G33kDude/FaRCX/issues/new">open an issue on GitHub</a>.</p>
+			</div>
+		</div>
+		<footer>
+			LEGO&reg; is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
+		</footer>
+	</body>
+</html>	

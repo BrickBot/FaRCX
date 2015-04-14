@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FaRCX - About</title>
+		<link rel="icon" href="images/RCX.ico" />
+		<link rel="stylesheet" type="text/css" href="site.css" />
+		<script src="jquery-2.1.1.min.js"></script>
+		<!-- BEGIN Icon Gubbins -->
+		<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">	
+		<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/icons/favicon-194x194.png" sizes="194x194">
+		<link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/icons/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/icons/manifest.json">
+		<link rel="shortcut icon" href="/icons/favicon.ico">
+		<meta name="msapplication-TileColor" content="#5b6c73">
+		<meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+		<meta name="msapplication-config" content="/icons/browserconfig.xml">
+		<meta name="theme-color" content="#e7d433">
+		<!-- END Icon Gubbins -->
+	</head>
+	<body>
+		<header>
+			<h1>FaRCX</h1>
+			<h2>Drive a LEGO&reg; Mindstorms RCX Robot Over the Internet!</h2>
+			<nav>
+				<a href="index.html">Home</a> &bull;
+				<a href="about.html">About</a> &bull;
+				<a href="login.html">Drive Our Rover!</a> &bull;
+				<a href="help.html">Help</a> &bull;
+				<a href="https://twitter.com/DriveOurRover" target="_blank">Twitter</a> &bull;
+				<a href="https://github.com/G33kDude/FaRCX" target="_blank">GitHub</a>
+			</nav>
+		</header>
+		<div class="content-wrapper">
+			<div class="content">
+				<h1>About FaRCX</h1>
+				<p>
+					FaRCX is software for controlling LEGO&reg; Mindstorms RCX robots over the internet.
+					It's written in JavaScript and PHP and runs on most Linux distributions.
+					On-board video streaming is done by <a href="http://sourceforge.net/projects/mjpg-streamer/">MJPG-streamer</a>,
+					and the other video stream is an <a href="http://www.axis.com/en/products/cam_2100/index.htm">Axis 2100 Network Camera</a>.
+				</p>
+				<h2>History</h2>
+				<p>
+					FaRCX has its conceptual origins in the <a href="http://www.planetary.org/explore/projects/redrover/">Red Rover Goes to Mars</a>
+					project, a joint venture between the LEGO Company and the <a href="http://planetary.org">Planetary Society</a>
+					which took place in the early 2000s. As part of the project, The Planetary Society produced a piece of software called <em>Red Rover, Red Rover</em>.
+					The software aimed to simulate the experience of operating a Mars rover over the internet using LEGO&reg; Mindstorms RCX robots.
+					From approximately 2005 to 2011, Mars stations were hosted around the world, each allowing users to control an RCX robot
+					in a different simulated Martian landscape.
+				</p>
+				<p>
+					One such station was hosted by Linda Hamilton at Marshall University in Huntington, West Virginia,
+					and remained operational at the university through late 2013. During this time many people from Huntington
+					and the rest of the world enjoyed operating the rover. In December 2013, the station was moved to the residence of
+					<a href="http://www.johnholbrook.us">John Holbrook</a>, and remained operational there for approximately a year.
+				</p>
+				<p>
+					However, the site, now nearing fifteen years in operation, was rather outdated. The page layout looked as if it had been drawn
+					up in 2002 (it had), and the "server" powering the site was a desktop-class Dell tower running Windows 98, which had aged somewhat.
+					Towards the end of 2014, John and his friend <a href="https://github.com/G33kDude">Philip Taylor</a> began to discuss the production
+					of a modernized site, written from scratch. The result, written mostly by Philip (but with John writing some of the web pages) is FaRCX,
+					and control of the Rover was transferred to FaRCX, running on Ubuntu Server 14.04 LTS, in January 2015.
+				</p>
+				<h2>Technical Overview</h2>
+				<p>
+					The rover is directly controlled through a <a href="https://en.wikipedia.org/wiki/Lego_Mindstorms#RCX">LEGO&reg; Mindstorms RCX</a> "smart brick"
+					by a few cables running from it to the motors. When you press a button on the drive page, a bit of <a href="https://jquery.com/">jQuery</a>
+					code makes a request to a <a href="http://php.net/">PHP</a> script, telling it to move the rover. The PHP page translates this request into
+					<a href="http://www.mralligator.com/rcx/opcodes.html">RCX opcodes</a> which are sent over infrared (like a TV remote) as a series of packets, as per its
+					<a href="http://www.mralligator.com/rcx/protocol.html">protocol</a>. To talk with the rover, a standard LEGO&reg; USB or serial IR tower is used, the
+					<a href="http://legousb.sourceforge.net/legousbtower/index.shtml">drivers</a> for which are already built into Linux kernels newer than 2.6.1.
+				</p>
+				<h1>Contact</h1>
+				<p>
+					To stay up to date on important FaRCX-related developments and notices, <a href="https://twitter.com/DriveOurRover">follow FaRCX on Twitter</a>.
+					For bug reports and similar, <a href="https://github.com/G33kDude/FaRCX/issues">open an issue on GitHub</a>. For other inquiries,
+					<a href="mailto:lego@johnholbrook.us?subject=FaRCX">send us an email</a>.
+				</p>
+			</div>
+		</div>
+		<footer>
+			LEGO&reg; is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
+		</footer>
+	</body>
+</html>	

@@ -1,6 +1,7 @@
 move = function(dir) {
 	$.ajax({
-		url: "./drive.php",
+		type: "POST",
+		url: "drive.php",
 		data: {
 			direction: dir,
 			time: $("#time").val(),

@@ -15,36 +15,42 @@ function make_packet($data)
 	return $buffer . str_repeat("\x00", 30);
 }
 
-if (isset($_REQUEST["time"]))
-	$time = $_REQUEST["time"];
-else
-	$time = 1;
+// Require direction to be set so just browsing to the page won't do anything
+if (!$_POST["direction"]) { die(); }
 
-if (isset($_REQUEST["power"]))
-	$power = $_REQUEST["power"];
-else
-	$power = 4;
+// Validate time
+$time = (int) $_POST["time"];
+if ($time < 1 || $time > 3) { $time = 2; }
 
-if (isset($_REQUEST["direction"]))
-	$dir = $_REQUEST["direction"];
-else
-	$dir = "forward";
+// Validate power
+$power = (int) $_POST["power"];
+if ($power < 1 || $power > 7) { $power = 4; }
 
 $tower = fopen('/dev/ttyS0', 'r+');
 
+// Set motor directions
 fwrite($tower, make_packet("e185")); // Set motors to forward
-if ($dir == "left")
-	fwrite($tower, make_packet("e941")); // Invert left motor
-elseif ($dir == "right")
-	fwrite($tower, make_packet("e944")); // Invert right motor
-elseif ($dir == "backward")
-	fwrite($tower, make_packet("e945")); // Invert both motors
+switch ($_POST["direction"])
+{
+	case "left":
+		fwrite($tower, make_packet("e941")); // Invert left motor
+		break;
+	case "right":
+		fwrite($tower, make_packet("e944")); // Invert right motor
+		break;
+	case "backward":
+	case "backwards":
+		fwrite($tower, make_packet("e945")); // Invert both motors
+		break;
+}
 
 fwrite($tower, make_packet("1305020" . $power)); // Set power for both motors
 
+// Drive
 fwrite($tower, make_packet("2185")); // Turn on both motors
 usleep($time * 1000000);
 fwrite($tower, make_packet("2945")); // Turn off both motors
+
 fclose($tower);
 
 ?>
